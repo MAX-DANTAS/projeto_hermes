@@ -290,7 +290,7 @@ footer {
     }
 
     .menu.ativo .bar:nth-child(2) {
-        opacity: 0;
+        opacity: 1;
     }
 
     .menu.ativo .bar:nth-child(3) {
