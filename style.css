@@ -307,6 +307,7 @@ footer {
         background: var(--white);
         gap: -10px;
         transition: 0.3s;
+        opacity: 1;
     }
 
     .nav-menu.ativo {
