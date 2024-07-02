@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>FY400 - Hermes: Sistema de Monitoramento de Válvulas</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="./index.html" class="logo"><img src="./img/logo_hermes.png" alt=""></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./index.html">Inicio</a></li>
+                <li class="nav-item"><a href="#">Quem somos</a></li>
+                <li class="nav-item"><a href="#">Contato</a></li>
+            </ul>
+            <div class="social">
+                <i class='bx bxl-facebook'></i>
+                <i class='bx bxl-whatsapp'></i>
+            </div>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="valvula">
+            <img src="./img/icon1.png" alt="">
+            <div class="infovalvula">
+                <h1>Posicionador Digital FY400</h1>
+                <p>O FY400 HART® detecta a pressão real da haste da válvula e torna o sensor de posição sem-contato
+                    (baseado no efeito Hall) reduz as deficiências de conexões mecânicas e alavancas.
+                </p>
+                <p><a href="#" id="localizacao-link"><strong>Localização: </strong>Área 58</p></a>
+                <p><strong>Pressão monitorada: </strong><span class="resultado"></span></p>
+                <p>
+                    <label for="atualizacao">Atualizar à cada </label>
+                    <select name="atualizacao" id="atualizacao">
+                        <option value="1000" selected>1 segundo</option>
+                        <option value="3000">3 segundos</option>
+                        <option value="5000">5 segundos</option>
+                        <option value="10000">10 segundos</option>
+                        <option value="30000">30 segundos</option>
+                        <option value="60000">60 segundos</option>
+                    </select>
+                </p>
+            </div>
+        </section>
+        <section class="monitor">
+            <div class="canvas">
+                <canvas id="monitoringChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            ©️ 2024 - Hermes Sistema de Monitoramento
+        </p>
+    </footer>
+    <div id="location-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Planta Baixa</h2>
+            <div class="img-container">
+                <img src="./img/planta_baixa_2.png" alt="Planta Baixa" class="planta-baixa">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

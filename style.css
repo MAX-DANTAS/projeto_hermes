@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --blue: #0364ac;
+    --white: #fff;
+    --dark: #1e1c2a;
+}
+
+body {
+    color: var(--dark);
+    background: var(--white);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+
+    & .bx:hover {
+        color: var(--blue);
+    }
+}
+
+.navigation img {
+    height: 50px;
+}
+
+.logo span {
+    color: var(--dark);
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a {
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navigation ul li a:hover {
+    color: var(--blue);
+}
+
+.navigation i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3) {
+    background: var(--blue);
+}
+
+.social {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+main {
+    margin-top: 50px;
+}
+
+.titulo{
+    font-family: "Poppins";
+    color: var(--blue);
+    margin: 50px 50px 0px 50px
+
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 50px 0px 50px;
+}
+
+
+.card {
+    background-color: #fbfbfb;
+    border-radius: 10px;
+    border: 1px solid var(--blue);
+    width: 30%;
+    min-height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  
+    /* Aparecer em fade in */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+
+    &:hover {
+        box-shadow: 0px 0px 8px 1px rgba(58, 32, 255, 0.3);
+    }
+
+    & img {
+        width: 70px;
+    }
+
+    & h1 {
+        text-align: center;
+    }
+  
+    /* Aparecer em fade in */
+    
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.banner{
+    width: 100%;
+}
+
+
+.nossa-foto {
+    width: 100%;
+    display: flex; 
+    margin: 0 auto; 
+  }
+  
+  
+footer {
+    background-color: var(--dark);
+    min-height: 150px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 0 100px;
+
+    & p {
+        color: var(--white);
+        font-size: 1rem;
+    }
+    
+}
+
+/*CSS para página de válvulas*/
+.valvula {
+    display: flex;
+    justify-content: center;
+    margin: 0px 50px 0px 50px;
+
+    & img {
+        height: 150px;
+        margin: 0 20px 0 20px;
+    }
+
+    & h1 {
+        font-size: 24px;
+        color: var(--azul);
+    }
+
+    & p {
+        font-size: 14px;
+        color: var(--dark);
+        margin: 5px 0 5px 0;
+    }
+}
+
+.monitor {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    & .canvas {
+        margin: 50px 0 0 0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: 400px;
+        width: 760px;
+    }
+}
+/*FIM CSS para página de válvulas*/
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.img-container {
+    position: relative;
+}
+
+.planta-baixa {
+    max-width: 100%;
+    max-height: 70vh;
+    display: block;
+    margin: 0 auto;
+}
+/* Estilize a imagem */
+
+
+/*Estilos Responsivos para telas até 785px de largura*/
+@media (max-width: 785px) {
+    .navigation {
+        padding: 18px 20px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.ativo {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .valvula {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 10px 0px 10px;
+    }
+
+    .infovalvula img {
+        height: 150px;
+        margin: 0 20px 0 20px;
+    }
+
+    .infovalvula h1 {
+        font-size: 18px;
+        color: var(--azul);
+    }
+
+    .infovalvula p {
+        font-size: 12px;
+        color: var(--dark);
+        margin: 5px 0 5px 0;
+    }
+    /*CSS Responsivo do Modal e Planta Baixa*/
+    .modal-content {
+        width: 95%;
+        height: 730px;
+    }
+
+    .close-btn {
+        font-size: 24px;
+    }
+
+    .img-container {
+        transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        top: 50%;
+        left: 50%;
+        width: 650px;
+    }
+
+    footer {
+        padding: 0 20px 0 25px;
+        min-height: 80px;
+        justify-content: center;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
