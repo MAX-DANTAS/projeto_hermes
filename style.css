@@ -163,7 +163,10 @@ main {
     display: flex; 
     margin: 0 auto; 
   }
-  
+
+.texto_somos{
+   padding: 20px;
+}
   
 footer {
     background-color: var(--dark);
