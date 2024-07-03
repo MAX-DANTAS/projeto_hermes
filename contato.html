@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Hermes</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="./index.html" class="logo"><img src="./img/logo_hermes.png" alt=""></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#">Inicio</a></li>
+                <li class="nav-item"><a href="quem_somos.html">Quem somos</a></li>
+                <li class="nav-item"><a href="#">Contato</a></li>
+            </ul>
+            <div class="social">
+                <i class='bx bxl-facebook'></i>
+                <i class='bx bxl-whatsapp'></i>
+            </div>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <selection>
+            <img src="./img/Asset 4.png" class="banner">
+        </selection>
+
+        <h2 class="titulo"> Válvulas Ativas
+        </h2>
+
+        <section class="contato">
+            <h1>Contate-nos</h1>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="text" id="celular" name="celular">
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione o assunto</option>
+                        <option value="suporte-tecnico">Suporte Técnico</option>
+                        <option value="suporte-financeiro">Suporte Financeiro</option>
+                        <option value="outro">Outro assunto</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            ©️ 2024 - Hermes Sistema de Monitoramento
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
